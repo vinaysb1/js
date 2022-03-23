@@ -1,0 +1,72 @@
+<html>
+<head>
+<script>
+function getNumber1()
+{
+	var num1 = parseFloat(document.getElementById("number1").value);
+	return num1;
+}
+function getNumber2()
+{
+	var num2 = parseFloat(document.getElementById("number2").value);
+	return num2;
+}
+function setResult(result)
+{
+	document.getElementById("result").value = result;
+}
+
+function addition()
+{
+	var result = getNumber1() + getNumber2();
+	setResult(result);
+	return true;
+}
+function subtraction()
+{
+	var result = getNumber1() - getNumber2();
+	setResult(result);
+	return true;
+}
+function multiplication()
+{
+	var result = getNumber1() * getNumber2();
+	setResult(result);
+	return true;
+}
+function division()
+{
+	var result = getNumber1() / getNumber2();
+	setResult(result);
+	return true;
+}
+</script>
+</head>
+<body>
+
+<table>
+	<tr>
+		<td>First Number</td>
+		<td><input type="text" id="number1"></td>
+	</tr>
+	<tr>
+		<td>Second Number</td>
+		<td><input type="text" id="number2"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td>
+		<input type="button" name="add" value = "+" onclick="return addition()">	
+		<input type="button" name="subtract" value = "-" onclick="return subtraction()">
+		<input type="button" name="multiply" value = "*" onclick="return multiplication()">
+		<input type="button" name="divide" value = "/" onclick="return division()">
+		</td>
+	</tr>
+	<tr>
+		<td>Result</td>
+		<td><input type="text" id="result" readonly="readonly"></td>
+	</tr>
+</table>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+
+<head>
+
+<script>
+function addition()
+{
+    
+    var num1 = parseFloat(document.getElementById("number1").value);
+	var num2 = parseFloat(document.getElementById("number2").value);
+	var result = num1 + num2;
+	document.getElementById("result").value = result;
+	return true;
+}
+</script>
+
+</head>
+
+<body>
+    <form name="form1">
+    <h2>Addition of 2 Integers</h2>
+<table>
+	<tr>
+		<td>First Number</td>
+		<td><input type="number"  id="number1" onkeyup="addition()"></td>
+	</tr>
+	<tr>
+		<td>Second Number</td>
+		<td><input type="number" name="number2" id="number2" onkeyup ="addition()"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="button" name="add" value = "Add" onclick="addition()"></td>
+	</tr>
+	<tr>
+		<td>Result</td>
+		<td><input type="text" name="result" id="result" readonly="readonly"></td>
+	</tr>
+
+</table>
+        </form>
+</body>
+</html>
