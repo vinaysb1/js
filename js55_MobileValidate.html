@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Validate Mobile Number</title>
+
+<script type="text/javascript">
+
+function validateForm()
+{
+	var m=document.form1.mobile.value;
+	if(m.length<10)
+	{
+		alert("mobile number must be 10 digits");
+		document.form1.mobile.focus();
+		return false;
+	}
+  	return true;
+}
+
+function onlyNumbers(event) 
+{
+    var e = event; // for trans-browser compatibility
+    var charCode = e.which || e.keyCode;
+    if (charCode >= 0 && charCode <=31)
+		return true;
+	else if (charCode >= 32 && charCode <= 47)
+        return false;
+	else if (charCode >= 48 && charCode <= 57)
+		return true;
+	else
+		return false;
+    
+}
+
+function onlyLowerAlpha(event) 
+{
+    var e = event; // for trans-browser compatibility
+    var charCode = e.which || e.keyCode;
+    if (charCode >= 0 && charCode <=31)
+		return true;
+	else if (charCode >= 32 && charCode <= 47)
+        return false;
+    else if (charCode == 43)
+        return true;
+	else if (charCode >= 48 && charCode <= 57)
+		return false;
+    else if (charCode >= 97 && charCode <=122)
+        return true;
+	else
+		return false;
+    
+}
+    
+</script>
+</head>
+
+
+<body >
+
+<h1>Provide your mobile number</h1>
+
+<form name="form1">
+		
+<input type="text" name="mobile" required="required" maxlength="10" onkeypress="return onlyNumbers(event)">
+
+<br>
+    
+    Email<input type="email" required="required">
+    <br>
+    
+<input type="submit" name="ok" value="OK" onclick="return validateForm()">
+
+</form>
+</body>
+
+</html>
+
+ 
+   
